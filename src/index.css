@@ -78,7 +78,32 @@ main {
   border-bottom-right-radius: 5px;
   font-family: 'helvetica neue',helvetica,arial,sans-serif;
   font-size: 12px;
+}
+
+.json-body-wrapper {
+  display: flex;
+}
+
+.beautified-wrapper {
+  flex-grow: 1;
+  padding: 20px;
   overflow: auto;
+}
+
+.right-panel {
+  overflow: auto;
+}
+
+.right-panel table, th, td {
+  border: 1px solid;
+}
+
+.right-panel table th, td {
+  min-width: 200px;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word; 
 }
 
 textarea {
@@ -92,24 +117,99 @@ textarea {
 }
 
 .expand-collapse-btn {
-  height: 12px;
-  line-height: 8px;
+  height: 9px;
+  line-height: 6px;
   padding: 0;
-  width: 18px;
+  width: 12px;
 }
 
 .brackets-btn {
-  color: blue;
   border: 0;
+  color: blue;
+  cursor: pointer;
   font-size: 14px;
   background-color: #fff;
 }
 
 .btn-wrapper {
-  display: flex;
-  align-items: center;  
+  display: inline-block;
+  align-items: center;
 }
 
-.beautified-wrapper {
-  padding: 20px;
+.prop-name {
+  font-size: 13px;
+  color: #92A8D1;
+  border: 0;
+  padding: 0;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.prop-value-boolean, .prop-value-object {
+  color: #0072B5;
+}
+
+.prop-value-number {
+  color: #009B77;
+}
+
+.prop-value-string {
+  color: #FF6F61;
+}
+
+span[class^="prop-value"] {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.beautified-wrapper ul {
+  list-style-type: square;
+  margin: 0;
+  padding-left: 27px;
+  border-left: 1px dotted;
+  margin-left: 24px;
+}
+
+.beautified-wrapper ul li {
+  position: relative;
+}
+
+.beautified-wrapper ul .prop-name:before {
+  content: '';
+  border-bottom: 1px dotted;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 9px;
+  left: -27px;
+  width: 16px;
+  z-index: 1;
+}
+
+.beautified-wrapper .prop-object > .prop-name:before {
+  left: 11px;
+  width: 7px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+  transition: opacity 0.5s linear;
+}
+
+.prop-object {
+  position: relative;
+  margin-left: -33px;
+  list-style: none;
+}
+
+.prop-value-object .btn-wrapper {
+  position: absolute;
+  left: 0;
+}
+
+.prop-object > .prop-name {
+  margin-left: 39px;
 }
