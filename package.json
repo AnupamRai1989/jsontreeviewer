@@ -1,6 +1,6 @@
 {
-  "homepage": "https://anupamrai1989.github.io/json-beautifier",
-  "name": "json-beautifier",
+  "homepage": "https://anupamrai1989.github.io/json-tree-viewer",
+  "name": "json-tree-viewer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
