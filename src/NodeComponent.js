@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ToggleBracketComponent from "./ToggleBracketComponent";
 
-function NodeComponent({object, getObjectContent, handleActiveObj }) {
+function NodeComponent({name, object, getObjectContent, handleActiveObj}) {
     const [expanded, setExpanded] = useState(false);
     const objPropsContent = getObjectContent(object, false);
     const list = Array.isArray(object);
@@ -17,7 +17,7 @@ function NodeComponent({object, getObjectContent, handleActiveObj }) {
     return (
         <>
             <ToggleBracketComponent list={list} expanded={expanded} bracketClickHandler={bracketClickHandler} toggleBracketBtnHandler={toggleBracketBtnHandler} />
-            <ul className={ expanded ? 'show' : 'hide' }>{objPropsContent}</ul>
+            <ul className={ expanded ? 'show' : 'hide' } key={name}>{objPropsContent}</ul>
         </>
     );
 }

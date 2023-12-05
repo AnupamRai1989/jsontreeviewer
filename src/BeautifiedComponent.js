@@ -4,7 +4,8 @@ import NodeComponent from "./NodeComponent";
 import RightPanelComponent from "./RightPanelComponent";
 
 function BeautifiedComponent() {
-    const json = useContext(JSONContext);
+    const jsonText = useContext(JSONContext);
+    const json = JSON.parse(jsonText);
     console.log(json);
 
     const [activeObj, setActiveObj] = useState(json);
@@ -38,7 +39,7 @@ function BeautifiedComponent() {
                         isObject = true;
                         displayValue = isPanel
                             ? (Array.isArray(value) ? 'Array': 'Object')
-                            : <NodeComponent object={value} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />;
+                            : <NodeComponent name={key} object={value} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />;
                     }
                     break;
                 default:
@@ -46,7 +47,7 @@ function BeautifiedComponent() {
                     break;
             }
             if (isPanel) {
-                return <tr><td>{key}</td><td>{displayValue}</td></tr>
+                return <tr key={key}><td>{key}</td><td>{displayValue}</td></tr>
             }
             return <>
                 <li key={key} className={ isObject ? 'prop-object' : '' }>

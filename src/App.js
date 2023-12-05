@@ -9,40 +9,57 @@ import { JSONContext } from './JSONContext';
 function App() {
   const [viewMode, setViewMode] = useState(JSONViewMode.Text);
   const [jsonTxt, setJsonTxt] = useState('');
-  const [jsonObj, setJsonObj] = useState(null);
+  let invalidJSON = false;
 
-  const title = 'JSON Beautifier';
-  const menus = [
-    { id: 0, text: JSONViewMode.Text },
-    { id: 1, text: JSONViewMode.Beautified }
-  ];
+  const title = 'JSON Tree Viewer';
 
   function viewModeClickHandler(viewMode) {
-    try {
-      if (!jsonTxt || !jsonTxt.trim()) {
-          console.log("Empty value");
-      }
-      const parsed = JSON.parse(jsonTxt);
-      setViewMode(viewMode);
-      setJsonObj(parsed)
-    } catch (e) {
-        console.log(e);
-        alert("Invalid JSON");
+    const parsed = getJSONObject(jsonTxt);
+    if (!parsed) {
+      return;
     }
+    setViewMode(viewMode);
   }
  
   function handleTextChange(event) {
     const data = event.target.value;
-    console.log(data);
     setJsonTxt(data);
+  }
+
+  function getJSONObject(jsonTxt) {
+    try {
+      return JSON.parse(jsonTxt);
+    }
+    catch(e) {
+      return null;
+    }
+  }
+
+  function prettierClickHandler() {
+    const object = getJSONObject(jsonTxt);
+    if (!object) {
+      return;
+    }
+    const prettyJSONText = JSON.stringify(object, null, 2);
+    console.log(prettyJSONText);
+    setJsonTxt(prettyJSONText);
+  }
+
+  function clearClickHandler() {
+    setJsonTxt('');
   }
 
   return (
     <>
       <Header title={title} />
-      <NavBar menus={menus} selected={viewMode} handleMenuClick={viewModeClickHandler} />
-      <JSONContext.Provider value={jsonObj}>
-        <JSONBodyComponent viewMode={viewMode} jsonTxt={jsonTxt} handleChange={handleTextChange} />
+      <NavBar
+        viewMode={viewMode}
+        handleMenuClick={viewModeClickHandler}
+        clearClickHandler={clearClickHandler}
+        prettierClickHandler={prettierClickHandler}
+      />
+      <JSONContext.Provider value={jsonTxt}>
+        <JSONBodyComponent viewMode={viewMode} invalidJSON={invalidJSON} handleChange={handleTextChange} />
       </JSONContext.Provider>
     </>
   );
