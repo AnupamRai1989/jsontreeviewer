@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AnupamRai1989/json-beautifier/static/css/main.b89b3529.css",
-    "main.js": "/AnupamRai1989/json-beautifier/static/js/main.7ba0d3c2.js",
-    "static/js/787.50e7d85b.chunk.js": "/AnupamRai1989/json-beautifier/static/js/787.50e7d85b.chunk.js",
-    "index.html": "/AnupamRai1989/json-beautifier/index.html",
-    "main.b89b3529.css.map": "/AnupamRai1989/json-beautifier/static/css/main.b89b3529.css.map",
-    "main.7ba0d3c2.js.map": "/AnupamRai1989/json-beautifier/static/js/main.7ba0d3c2.js.map",
-    "787.50e7d85b.chunk.js.map": "/AnupamRai1989/json-beautifier/static/js/787.50e7d85b.chunk.js.map"
+    "main.css": "/json-beautifier/static/css/main.b89b3529.css",
+    "main.js": "/json-beautifier/static/js/main.72c9d67b.js",
+    "static/js/787.50e7d85b.chunk.js": "/json-beautifier/static/js/787.50e7d85b.chunk.js",
+    "index.html": "/json-beautifier/index.html",
+    "main.b89b3529.css.map": "/json-beautifier/static/css/main.b89b3529.css.map",
+    "main.72c9d67b.js.map": "/json-beautifier/static/js/main.72c9d67b.js.map",
+    "787.50e7d85b.chunk.js.map": "/json-beautifier/static/js/787.50e7d85b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b89b3529.css",
-    "static/js/main.7ba0d3c2.js"
+    "static/js/main.72c9d67b.js"
   ]
 }
