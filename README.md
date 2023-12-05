@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# JSON Tree Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Quick and easy tool to view your JSON text in a DOM tree. 
+
+
+## Features
+
+- Validate your JSON by entering or pasting JSON text. 
+- Prettify you JSON
+- Transform JSON text into collapsible/expandable DOM tree
+- Right panel to list object's property and values based on click on tree node
 
 ## Available Scripts
 
