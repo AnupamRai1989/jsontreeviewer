@@ -2,38 +2,35 @@
 
 Quick and easy tool to view your JSON text in a DOM tree. 
 
-
 ## Features
 
 - Validate your JSON by entering or pasting JSON text. 
-- Prettify you JSON
-- Transform JSON text into collapsible/expandable DOM tree
-- Right panel to list object's property and values based on click on tree node
+- Prettify you JSON.
+- Transform/Preview your JSON text into collapsible/expandable DOM tree.
+- Right panel to list selected/clicked object's property and values.
 
-## Available Scripts
+## Live Website
 
-In the project directory, you can run:
+See the hosted website in action [here](https://github.com/AnupamRai1989/json-tree-viewer).
 
-### `npm start`
+## Build Steps
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The code of JSON Tree Viewer is located in folder `./src`:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Install Dependencies
+  ```
+  npm start
+  ```
 
-### `npm test`
+- Build JSON Tree Viewer
+  ```
+  npm build
+  ```
+  This will generate the compiled `js` and `css` files.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Test
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+Run unit tests:
+```
+npm test
+```
