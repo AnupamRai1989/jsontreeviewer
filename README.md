@@ -11,7 +11,7 @@ Quick and easy tool to view your JSON text in a DOM tree.
 
 ## Live Website
 
-See the hosted website in action [here](https://github.com/AnupamRai1989/json-tree-viewer).
+See the hosted website in action [here](https://anupamrai1989.github.io/json-tree-viewer).
 
 ## Build Steps
 
@@ -19,8 +19,14 @@ The code of JSON Tree Viewer is located in folder `./src`:
 
 - Install Dependencies
   ```
+  npm install
+  ```
+
+- Run app in development mode with live reload on source code change
+  ```
   npm start
   ```
+  Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 - Build JSON Tree Viewer
   ```
