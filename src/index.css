@@ -111,7 +111,7 @@ main {
 }
 
 .right-panel table th, td {
-  font-size: 13px;
+  font-size: 12px;
   min-width: 200px;
   padding: 5px;
   overflow: hidden;

@@ -15,8 +15,16 @@ function BeautifiedComponent() {
     }
 
     function getObjectContent(object, isPanel) {
+        if (!object) {
+            return;
+        }
         const keys = Object.keys(object);
-        return keys.map(key => {
+        const resultKeys = isPanel ?
+            keys.sort((a, b) => {
+                return a.localeCompare(b);
+            })
+            : keys;
+        return resultKeys.map(key => {
             const value = object[key];
             const type = typeof value;
             let displayValue;
