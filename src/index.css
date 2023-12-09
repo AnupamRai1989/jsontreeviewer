@@ -192,15 +192,16 @@ span[class^="prop-value"] {
 
 .beautified-wrapper ul li {
   position: relative;
+  padding: 1px 0;
 }
 
 .beautified-wrapper ul .prop-name:before {
   content: '';
   border-bottom: 1px dotted;
   position: absolute;
-  transform: translateY(-50%);
-  top: 9px;
+  top: 8.7px;
   left: -27px;
+  height: 1px;
   width: 16px;
   z-index: 1;
 }
@@ -253,17 +254,13 @@ span[class^="prop-value"] {
   cursor: pointer;
 }
 
-.prettier-btn {
+.btn-primary {
   background-color: #aec4d1;
   color: #FFF;
   margin-right: 15px;
 }
 
-.clear-btn {
+.btn-secondary {
   background-color: #FFF;
   color: #466c83;
-}
-
-.json-beautified {
-  top: 107px;
 }

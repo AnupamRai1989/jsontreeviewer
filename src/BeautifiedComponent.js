@@ -4,9 +4,8 @@ import NodeComponent from "./NodeComponent";
 import RightPanelComponent from "./RightPanelComponent";
 
 function BeautifiedComponent() {
-    const jsonText = useContext(JSONContext);
-    const json = JSON.parse(jsonText);
-    console.log(json);
+    const context = useContext(JSONContext);
+    const json = JSON.parse(context.json);
 
     const [activeObj, setActiveObj] = useState(json);
 

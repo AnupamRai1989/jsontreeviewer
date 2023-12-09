@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Header from './Header';
 import { JSONViewMode } from './models/JSONViewMode';
@@ -9,6 +9,22 @@ import { JSONContext } from './JSONContext';
 function App() {
   const [viewMode, setViewMode] = useState(JSONViewMode.Text);
   const [jsonTxt, setJsonTxt] = useState('');
+  const [expandAll, setExpandAll] = useState(null);
+  useEffect(() => {
+    expandAllHandler(null);
+  }, [expandAll]);
+
+  const navActionsByViewMode = {
+    [JSONViewMode.Text]: [
+      { name: 'Prettier', handler: prettierClickHandler, className: 'btn-primary' },
+      { name: 'Clear', handler: clearClickHandler, className: 'btn-secondary' }
+    ],
+    [JSONViewMode.Beautified]: [
+      { name: 'Expand All', handler: expandAllHandler.bind(null, true), className: 'btn-primary' },
+      { name: 'Collapse All', handler: expandAllHandler.bind(null, false), className: 'btn-secondary' }
+    ]
+  };
+
   let invalidJSON = false;
 
   const title = 'JSON Tree Viewer';
@@ -19,6 +35,10 @@ function App() {
       return;
     }
     setViewMode(viewMode);
+  }
+
+  function expandAllHandler(flag) {
+    setExpandAll(flag);
   }
  
   function handleTextChange(event) {
@@ -41,7 +61,6 @@ function App() {
       return;
     }
     const prettyJSONText = JSON.stringify(object, null, 2);
-    console.log(prettyJSONText);
     setJsonTxt(prettyJSONText);
   }
 
@@ -55,10 +74,9 @@ function App() {
       <NavBar
         viewMode={viewMode}
         handleMenuClick={viewModeClickHandler}
-        clearClickHandler={clearClickHandler}
-        prettierClickHandler={prettierClickHandler}
+        navActionsByViewMode={navActionsByViewMode}
       />
-      <JSONContext.Provider value={jsonTxt}>
+      <JSONContext.Provider value={{ json: jsonTxt, expandAll: expandAll }}>
         <JSONBodyComponent viewMode={viewMode} invalidJSON={invalidJSON} handleChange={handleTextChange} />
       </JSONContext.Provider>
     </>

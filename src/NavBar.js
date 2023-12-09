@@ -1,6 +1,6 @@
 import { JSONViewMode } from './models/JSONViewMode';
 
-function NavBar({ viewMode, handleMenuClick, prettierClickHandler, clearClickHandler }) {
+function NavBar({ viewMode, handleMenuClick, navActionsByViewMode }) {
     const menus = [
         { id: 0, text: JSONViewMode.Text },
         { id: 1, text: JSONViewMode.Beautified }
@@ -16,12 +16,10 @@ function NavBar({ viewMode, handleMenuClick, prettierClickHandler, clearClickHan
                 </button>
         </li>;
     });
-    const secondaryNav = viewMode === JSONViewMode.Text ?
-        <div className="secondary-nav">
-            <button className="prettier-btn" type="button" onClick={prettierClickHandler}>Prettier</button>
-            <button className="clear-btn" type="button" onClick={clearClickHandler}>Clear</button>
-        </div>
-        : null;
+    const actionButtons = navActionsByViewMode[viewMode];
+    const actionButtonsContent = actionButtons.map((actionButton) => {
+        return <button className={actionButton.className} type="button" onClick={actionButton.handler}>{actionButton.name}</button>;
+    });
     return (
         <>
             <nav>
@@ -29,7 +27,9 @@ function NavBar({ viewMode, handleMenuClick, prettierClickHandler, clearClickHan
                     { menuItems }
                 </ul>
             </nav>
-            {secondaryNav}
+            <div className="secondary-nav">
+                {actionButtonsContent}
+            </div>
         </>
     );
 }
