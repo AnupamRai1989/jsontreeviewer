@@ -18,7 +18,7 @@ function NavBar({ viewMode, handleMenuClick, navActionsByViewMode }) {
     });
     const actionButtons = navActionsByViewMode[viewMode];
     const actionButtonsContent = actionButtons.map((actionButton) => {
-        return <button className={actionButton.className} type="button" onClick={actionButton.handler}>{actionButton.name}</button>;
+        return <button key={actionButton.name} className={actionButton.className} type="button" onClick={actionButton.handler}>{actionButton.name}</button>;
     });
     return (
         <>

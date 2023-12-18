@@ -56,10 +56,14 @@ function BeautifiedComponent() {
             if (isPanel) {
                 return <tr key={key}><td>{key}</td><td>{displayValue}</td></tr>
             }
+            if (isObject) {
+                return displayValue;
+            }
             return <>
-                <li key={key} className={ isObject ? 'prop-object' : '' }>
-                <button className="prop-name" type="button" onClick={() => handleActiveObj(value)}>{key}: </button>
-                <span className={displayValueCssClass}>{displayValue}</span></li>
+                <li key={key} className="prop-object">
+                    <button className="prop-name" type="button" onClick={() => handleActiveObj(value)}>{key}: </button>
+                    <span className={displayValueCssClass}>{displayValue}</span>
+                </li>
             </>;
         });
     }
@@ -67,7 +71,7 @@ function BeautifiedComponent() {
     return (
         <>
             <div className="beautified-wrapper">
-                <NodeComponent object={json} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />
+                <NodeComponent name={ null } object={json} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />
             </div>
             <RightPanelComponent object={activeObj} getObjectContent={getObjectContent} />
         </>

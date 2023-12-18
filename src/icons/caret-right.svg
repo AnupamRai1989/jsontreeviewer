@@ -1,0 +1,17 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+        <defs>
+            <style>
+                .c {
+                    fill: #466c83;
+                }
+            </style>
+        </defs>
+        <g id="a"></g>
+        <g id="b">
+            <polygon class="c" points="9.5 16 9.5 8 14.5 12 9.5 16"></polygon>
+        </g>
+    </g>
+</svg>

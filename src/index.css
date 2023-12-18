@@ -134,22 +134,23 @@ textarea {
 }
 
 .expand-collapse-btn {
-  height: 9px;
+  background-color: unset;
+  cursor: pointer;
   line-height: 6px;
   padding: 0;
-  width: 12px;
+  border: 0;
 }
 
-.brackets-btn {
+.bracket {
   border: 0;
   color: blue;
-  cursor: pointer;
   font-size: 14px;
   background-color: #fff;
+  padding: 1px;
 }
 
 .btn-wrapper {
-  display: inline-block;
+  display: flex;
   align-items: center;
 }
 
@@ -177,6 +178,7 @@ textarea {
 span[class^="prop-value"] {
   font-size: 13px;
   font-weight: 400;
+  margin-left: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
@@ -187,28 +189,25 @@ span[class^="prop-value"] {
   margin: 0;
   padding-left: 27px;
   border-left: 1px dotted;
-  margin-left: 24px;
+  margin-left: 3px;
 }
 
 .beautified-wrapper ul li {
   position: relative;
-  padding: 1px 0;
 }
 
 .beautified-wrapper ul .prop-name:before {
   content: '';
   border-bottom: 1px dotted;
   position: absolute;
-  top: 8.7px;
+  top: 7.5px;
   left: -27px;
   height: 1px;
-  width: 16px;
-  z-index: 1;
+  width: 15px;
 }
 
-.beautified-wrapper .prop-object > .prop-name:before {
-  left: 11px;
-  width: 7px;
+.beautified-wrapper ul .prop-name-obj:before {
+  top: 9px;
 }
 
 .show {
@@ -218,21 +217,6 @@ span[class^="prop-value"] {
 .hide {
   display: none;
   transition: opacity 0.5s linear;
-}
-
-.prop-object {
-  position: relative;
-  margin-left: -33px;
-  list-style: none;
-}
-
-.prop-value-object .btn-wrapper {
-  position: absolute;
-  left: 0;
-}
-
-.prop-object > .prop-name {
-  margin-left: 39px;
 }
 
 .secondary-nav {
@@ -263,4 +247,20 @@ span[class^="prop-value"] {
 .btn-secondary {
   background-color: #FFF;
   color: #466c83;
+}
+
+.caret-down {
+  background-image: url('./icons/caret-down.svg');
+  width: 20px;
+  height: 20px;
+}
+
+.caret-right {
+  background-image: url('./icons/caret-right.svg');
+  width: 20px;
+  height: 20px;
+}
+
+.prop-name-wrapper {
+  display: flex;
 }

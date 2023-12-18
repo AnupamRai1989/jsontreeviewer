@@ -26,10 +26,22 @@ function NodeComponent({ name, object, getObjectContent, handleActiveObj }) {
         handleActiveObj(object);
     }
 
+    const propName = name ? `${name}:` : (list ? 'Array' : 'Object');
+
+    const objectContents = <>
+        <div className="prop-name-wrapper">
+                <button className="prop-name prop-name-obj" type="button" onClick={bracketClickHandler}>{propName}</button>
+                <ToggleBracketComponent list={list} expanded={expanded} bracketClickHandler={bracketClickHandler} toggleBracketBtnHandler={toggleBracketBtnHandler} />
+            </div>
+            <ul className={ expanded ? 'show' : 'hide' } key={name}>{objPropsContent}</ul>
+            <button type="button" className="bracket bracket-close">
+                    { Array.isArray(list) ? "]": "}" }
+            </button>
+    </>;
+
     return (
         <>
-            <ToggleBracketComponent list={list} expanded={expanded} bracketClickHandler={bracketClickHandler} toggleBracketBtnHandler={toggleBracketBtnHandler} />
-            <ul className={ expanded ? 'show' : 'hide' } key={name}>{objPropsContent}</ul>
+            { name ? <li key={propName}>{objectContents}</li> : objectContents }
         </>
     );
 }
