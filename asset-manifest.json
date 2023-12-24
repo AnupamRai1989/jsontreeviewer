@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.25154697.css",
-    "main.js": "/static/js/main.b4fbfe1b.js",
-    "static/js/787.adf76622.chunk.js": "/static/js/787.adf76622.chunk.js",
-    "static/media/close.svg": "/static/media/close.9c84a114728036e1f11e.svg",
-    "index.html": "/index.html",
-    "static/media/caret-right.svg": "/static/media/caret-right.d2ae0961cd521e38f8e2.svg",
-    "static/media/caret-down.svg": "/static/media/caret-down.f9d4696455f718aef640.svg",
-    "main.25154697.css.map": "/static/css/main.25154697.css.map",
-    "main.b4fbfe1b.js.map": "/static/js/main.b4fbfe1b.js.map",
-    "787.adf76622.chunk.js.map": "/static/js/787.adf76622.chunk.js.map"
+    "main.css": "/jsontreeviewer/static/css/main.fe8972f9.css",
+    "main.js": "/jsontreeviewer/static/js/main.93683d3b.js",
+    "static/js/787.adf76622.chunk.js": "/jsontreeviewer/static/js/787.adf76622.chunk.js",
+    "static/media/close.svg": "/jsontreeviewer/static/media/close.9c84a114728036e1f11e.svg",
+    "index.html": "/jsontreeviewer/index.html",
+    "static/media/caret-right.svg": "/jsontreeviewer/static/media/caret-right.d2ae0961cd521e38f8e2.svg",
+    "static/media/caret-down.svg": "/jsontreeviewer/static/media/caret-down.f9d4696455f718aef640.svg",
+    "main.fe8972f9.css.map": "/jsontreeviewer/static/css/main.fe8972f9.css.map",
+    "main.93683d3b.js.map": "/jsontreeviewer/static/js/main.93683d3b.js.map",
+    "787.adf76622.chunk.js.map": "/jsontreeviewer/static/js/787.adf76622.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25154697.css",
-    "static/js/main.b4fbfe1b.js"
+    "static/css/main.fe8972f9.css",
+    "static/js/main.93683d3b.js"
   ]
 }
