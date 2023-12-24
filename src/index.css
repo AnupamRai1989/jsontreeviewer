@@ -2,6 +2,10 @@
   font-family: 'helvetica neue',helvetica,arial,sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   background: #f4fbff;
   color: #466c83;
@@ -52,7 +56,6 @@ nav ul li {
 }
 
 nav ul li button {
-  cursor: pointer;
   width: 120px;
   height: 100%;
   color: #466c83;
@@ -135,7 +138,6 @@ textarea {
 
 .expand-collapse-btn {
   background-color: unset;
-  cursor: pointer;
   line-height: 6px;
   padding: 0;
   border: 0;
@@ -160,7 +162,6 @@ textarea {
   border: 0;
   padding: 0;
   background-color: unset;
-  cursor: pointer;
 }
 
 .prop-value-boolean, .prop-value-object {
@@ -235,7 +236,6 @@ span[class^="prop-value"] {
 .secondary-nav button {
   border-color: #aec4d1;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .btn-primary {
@@ -263,4 +263,44 @@ span[class^="prop-value"] {
 
 .prop-name-wrapper {
   display: flex;
+}
+
+.alert-wrapper {
+  position: fixed;
+  top: 27px;
+  left: 50%;
+  display: flex;
+  padding: 9px;
+  width: 350px;
+  margin-left: -175px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.alert-visible {
+  visibility: visible;
+}
+
+.alert-error {
+  background-color: #FFF2F0;
+  color: #E02200;
+  border: 1px solid #E02200;
+}
+
+.alert-msg {
+  font-size: 14px;
+}
+
+.close-btn {
+  background-color: unset;
+  border: 0;
+  margin-left: auto;
+  margin-top: 1px;
+}
+
+.close-icon {
+  background-image: url(./icons/close.svg);
+  width: 16px;
+  height: 16px;
+  background-size: contain;
 }

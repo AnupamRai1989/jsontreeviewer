@@ -2,13 +2,12 @@ import { useContext } from "react";
 
 import { JSONContext } from "./JSONContext";
 
-function TextComponent({ handleChange, invalidJSON }) {
+function TextComponent({ handleChange }) {
     const context = useContext(JSONContext);
     return (
-        <section className={invalidJSON ? 'invalid-json' : ''}>
+        <section>
             <textarea autoFocus onChange={ handleChange } value={context.json}>
             </textarea>
-            <p>Invalid JSON!!</p>
         </section>
     );
 }

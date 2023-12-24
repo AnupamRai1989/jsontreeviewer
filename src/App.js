@@ -5,11 +5,13 @@ import { JSONViewMode } from './models/JSONViewMode';
 import JSONBodyComponent from './JSONBodyComponent';
 import NavBar from './NavBar';
 import { JSONContext } from './JSONContext';
+import AlertBox from './AlertBox';
 
 function App() {
   const [viewMode, setViewMode] = useState(JSONViewMode.Text);
   const [jsonTxt, setJsonTxt] = useState('');
   const [expandAll, setExpandAll] = useState(null);
+  const [alert, setAlert] = useState({ show: false, message: '', type: 'error' });
   useEffect(() => {
     expandAllHandler(null);
   }, [expandAll]);
@@ -25,9 +27,8 @@ function App() {
     ]
   };
 
-  let invalidJSON = false;
-
   const title = 'JSON Tree Viewer';
+  const invalidJSONMsg = "JSON is invalid.";
 
   function viewModeClickHandler(viewMode) {
     const parsed = getJSONObject(jsonTxt);
@@ -51,8 +52,28 @@ function App() {
       return JSON.parse(jsonTxt);
     }
     catch(e) {
+      invalidJSONHandler(e && e.message);
       return null;
     }
+  }
+
+  function closeAlert() {
+    setAlert({
+      ...alert,
+      show: false,
+      message: ''
+    });
+  }
+
+  function invalidJSONHandler(reason) {
+      setAlert({
+        ...alert,
+        show: true,
+        message: `${invalidJSONMsg} ${reason}.`
+      });
+      setTimeout(() => {
+        closeAlert();
+      }, 5000);
   }
 
   function prettierClickHandler() {
@@ -77,8 +98,9 @@ function App() {
         navActionsByViewMode={navActionsByViewMode}
       />
       <JSONContext.Provider value={{ json: jsonTxt, expandAll: expandAll }}>
-        <JSONBodyComponent viewMode={viewMode} invalidJSON={invalidJSON} handleChange={handleTextChange} />
+        <JSONBodyComponent viewMode={viewMode} handleChange={handleTextChange} />
       </JSONContext.Provider>
+      <AlertBox show={alert.show} message={alert.message} type="error" closeBtnHandler={closeAlert} />
     </>
   );
 }
