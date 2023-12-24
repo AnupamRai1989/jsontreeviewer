@@ -11,7 +11,7 @@ Quick and easy tool to view your JSON text in a DOM tree.
 
 ## Live Website
 
-See the hosted website in action [here](https://anupamrai1989.github.io/jsontreeviewer).
+See the hosted website in action [here](https://www.jsontreeview.org).
 
 ## Build Steps
 
