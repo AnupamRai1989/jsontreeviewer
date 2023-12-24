@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/jsontreeviewer/static/css/main.f10098db.css",
-    "main.js": "/jsontreeviewer/static/js/main.58af4354.js",
+    "main.css": "/jsontreeviewer/static/css/main.fe8972f9.css",
+    "main.js": "/jsontreeviewer/static/js/main.93683d3b.js",
     "static/js/787.adf76622.chunk.js": "/jsontreeviewer/static/js/787.adf76622.chunk.js",
+    "static/media/close.svg": "/jsontreeviewer/static/media/close.9c84a114728036e1f11e.svg",
     "index.html": "/jsontreeviewer/index.html",
     "static/media/caret-right.svg": "/jsontreeviewer/static/media/caret-right.d2ae0961cd521e38f8e2.svg",
     "static/media/caret-down.svg": "/jsontreeviewer/static/media/caret-down.f9d4696455f718aef640.svg",
-    "main.f10098db.css.map": "/jsontreeviewer/static/css/main.f10098db.css.map",
-    "main.58af4354.js.map": "/jsontreeviewer/static/js/main.58af4354.js.map",
+    "main.fe8972f9.css.map": "/jsontreeviewer/static/css/main.fe8972f9.css.map",
+    "main.93683d3b.js.map": "/jsontreeviewer/static/js/main.93683d3b.js.map",
     "787.adf76622.chunk.js.map": "/jsontreeviewer/static/js/787.adf76622.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f10098db.css",
-    "static/js/main.58af4354.js"
+    "static/css/main.fe8972f9.css",
+    "static/js/main.93683d3b.js"
   ]
 }
