@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "JSON Tree Viewer",
+  "name": "JSON Tree Viewer is quick and easy tool to view your JSON text in a DOM tree.",
   "icons": [
     {
       "src": "favicon.ico",
