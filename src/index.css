@@ -21,13 +21,15 @@ body {
 
 header {
   position: fixed;
+  left: 40px;
+  right: 40px;
   height: 60px;
-  width: 100%;
 }
 
 header h1 {
   font-weight: 200;
   margin: 10.5px 0;
+  text-align: center;
 }
 
 nav {
@@ -37,26 +39,27 @@ nav {
   top: 60px;
   height: 45px;
   background: #aec4d1;
-  padding-left: 39px;
+  padding: 0 27px;
   border: 1px solid #85a6ba;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
 nav ul {
+  display: flex;
+  justify-content: center;
   list-style: none;
   padding: 0;
   height: 36px;
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 
 nav ul li {
-  display: inline;
   margin-right: 15px;
 }
 
 nav ul li button {
-  width: 120px;
+  width: 96px;
   height: 100%;
   color: #466c83;
   border: 0;
@@ -97,6 +100,7 @@ main {
 }
 
 .right-panel {
+  display: none;
   min-width: 425px;
   overflow: auto;
 }
@@ -267,12 +271,12 @@ span[class^="prop-value"] {
 
 .alert-wrapper {
   position: fixed;
-  top: 27px;
-  left: 50%;
+  top: 154px;
+  left: 11.5%;
+  width: 75%;
   display: flex;
-  padding: 9px;
-  width: 350px;
-  margin-left: -175px;
+  padding: 1%;
+  max-width: 350px;
   border-radius: 5px;
   visibility: hidden;
 }
@@ -303,4 +307,26 @@ span[class^="prop-value"] {
   width: 16px;
   height: 16px;
   background-size: contain;
+}
+
+@media screen and (min-width: 450px) {
+  header h1 {
+    text-align: left;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .alert-wrapper {
+    margin-left: -184px;
+    padding: 9px;
+    left: 50%;
+  }
+
+  .right-panel {
+    display: block;
+  }
 }

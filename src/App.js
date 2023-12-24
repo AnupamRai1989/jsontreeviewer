@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 
 import Header from './Header';
-import { JSONViewMode } from './models/JSONViewMode';
 import JSONBodyComponent from './JSONBodyComponent';
 import NavBar from './NavBar';
 import { JSONContext } from './JSONContext';
 import AlertBox from './AlertBox';
 
+import { JSONViewMode } from './models/JSONViewMode';
+import { DEFAULT_JSON } from './models/Constants';
+
 function App() {
   const [viewMode, setViewMode] = useState(JSONViewMode.Text);
-  const [jsonTxt, setJsonTxt] = useState('');
+  const [jsonTxt, setJsonTxt] = useState(JSON.stringify(DEFAULT_JSON, null, 2));
   const [expandAll, setExpandAll] = useState(null);
   const [alert, setAlert] = useState({ show: false, message: '', type: 'error' });
   useEffect(() => {
