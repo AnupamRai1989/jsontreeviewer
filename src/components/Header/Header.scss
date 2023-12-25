@@ -1,0 +1,18 @@
+header {
+    position: fixed;
+    left: 40px;
+    right: 40px;
+    height: 60px;
+}
+
+header h1 {
+    font-weight: 200;
+    margin: 10.5px 0;
+    text-align: center;
+}
+
+@media screen and (min-width: 450px) {
+    header h1 {
+        text-align: left;
+    }
+}

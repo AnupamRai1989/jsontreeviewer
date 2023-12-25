@@ -1,4 +1,6 @@
-import { JSONViewMode } from './models/JSONViewMode';
+import './NavBar.scss';
+
+import { JSONViewMode } from '../../models/JSONViewMode';
 
 function NavBar({ viewMode, handleMenuClick, navActionsByViewMode }) {
     const menus = [

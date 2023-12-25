@@ -1,0 +1,134 @@
+@use "./color" as *;
+
+* {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background: $alice-blue;
+  color: $fiord;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 40px;
+}
+
+.beautified-wrapper {
+  flex-grow: 1;
+  padding: 10px;
+  overflow: auto;
+}
+
+.prop-name {
+  font-size: 13px;
+  color: #92A8D1;
+  border: 0;
+  padding: 0;
+  background-color: unset;
+}
+
+.prop-value-boolean,
+.prop-value-object {
+  color: #0072B5;
+}
+
+.prop-value-number {
+  color: #009B77;
+}
+
+.prop-value-string {
+  color: #FF6F61;
+}
+
+span[class^="prop-value"] {
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.beautified-wrapper ul {
+  list-style-type: square;
+  margin: 0;
+  padding-left: 27px;
+  border-left: 1px dotted;
+  margin-left: 3px;
+}
+
+.beautified-wrapper ul li {
+  position: relative;
+}
+
+.beautified-wrapper ul .prop-name:before {
+  content: '';
+  border-bottom: 1px dotted;
+  position: absolute;
+  top: 7.5px;
+  left: -27px;
+  height: 1px;
+  width: 15px;
+}
+
+.beautified-wrapper ul .prop-name-obj:before {
+  top: 9px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+  transition: opacity 0.5s linear;
+}
+
+.secondary-nav {
+  position: fixed;
+  top: 107px;
+  left: 40px;
+  right: 40px;
+  background-color: $white;
+  border: 1px dashed #466c83;
+  border-top: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.secondary-nav button {
+  border: 1px solid $deep-cerulean;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn-primary {
+  background-color: $deep-cerulean;
+  color: $white;
+  margin-right: 15px;
+}
+
+.btn-secondary {
+  background-color: $white;
+  color: $deep-cerulean;
+}
+
+.prop-name-wrapper {
+  display: flex;
+}
+
+.close-btn {
+  background-color: unset;
+  border: 0;
+  margin-left: auto;
+  margin-top: 1px;
+}

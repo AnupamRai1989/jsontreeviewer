@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 
-import ToggleBracketComponent from "./ToggleBracketComponent";
+import ObjectToggle from "../ObjectToggle/ObjectToggle";
 
-import { JSONContext } from "./JSONContext";
+import { JSONContext } from "../../context/JSONContext";
 
-function NodeComponent({ name, object, getObjectContent, handleActiveObj }) {
+function TreeNode({ name, object, getObjectContent, handleActiveObj }) {
     const context = useContext(JSONContext);
     const expandAll = context.expandAll;
     const [expanded, setExpanded] = useState(false);
@@ -31,7 +31,7 @@ function NodeComponent({ name, object, getObjectContent, handleActiveObj }) {
     const objectContents = <>
         <div className="prop-name-wrapper">
                 <button className="prop-name prop-name-obj" type="button" onClick={bracketClickHandler}>{propName}</button>
-                <ToggleBracketComponent list={list} expanded={expanded} bracketClickHandler={bracketClickHandler} toggleBracketBtnHandler={toggleBracketBtnHandler} />
+                <ObjectToggle list={list} expanded={expanded} bracketClickHandler={bracketClickHandler} toggleBracketBtnHandler={toggleBracketBtnHandler} />
             </div>
             <ul className={ expanded ? 'show' : 'hide' } key={name}>{objPropsContent}</ul>
             <button type="button" className="bracket bracket-close">
@@ -46,4 +46,4 @@ function NodeComponent({ name, object, getObjectContent, handleActiveObj }) {
     );
 }
 
-export default NodeComponent;
+export default TreeNode;

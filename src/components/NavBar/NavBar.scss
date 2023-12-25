@@ -1,0 +1,49 @@
+@use "../../assets/styles/color" as *;
+
+nav {
+    position: fixed;
+    left: 40px;
+    right: 40px;
+    top: 60px;
+    height: 45px;
+    background-color: $jungle-mist;
+    padding: 0 27px;
+    border: 1px solid $nepal;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    height: 36px;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li button {
+    width: 96px;
+    height: 100%;
+    color: $pickled-bluewood;
+    border: 0;
+    background-color: unset;
+}
+
+nav ul li button.active {
+    background-color: $white;
+    border: 1px solid $nepal;
+    border-bottom: 0;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+@media screen and (min-width: 450px) {
+    nav ul {
+        justify-content: flex-start;
+    }
+}

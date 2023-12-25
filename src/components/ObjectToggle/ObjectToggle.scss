@@ -1,0 +1,22 @@
+@use "../../assets/styles/color" as *;
+@use "../../assets/styles/image";
+
+.bracket {
+    border: 0;
+    color: $deep-cerulean;
+    font-size: 14px;
+    background-color: $white;
+    padding: 1px;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.expand-collapse-btn {
+    background-color: unset;
+    line-height: 6px;
+    padding: 0;
+    border: 0;
+}

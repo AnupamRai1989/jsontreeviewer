@@ -1,4 +1,6 @@
-function ToggleBracketComponent({ list, expanded, toggleBracketBtnHandler, bracketClickHandler }) {
+import './ObjectToggle.scss';
+
+function ObjectToggle({ list, expanded, toggleBracketBtnHandler, bracketClickHandler }) {
     const toggleBtnClassName = expanded ? 'expand-collapse-btn caret-down' : 'expand-collapse-btn caret-right';
     return (
         <div className="btn-wrapper">
@@ -10,4 +12,4 @@ function ToggleBracketComponent({ list, expanded, toggleBracketBtnHandler, brack
     );
 }
 
-export default ToggleBracketComponent;
+export default ObjectToggle;

@@ -1,3 +1,5 @@
+import './Header.scss';
+
 function Header({ title }) {
     return (
         <header>

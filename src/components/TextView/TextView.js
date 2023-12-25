@@ -1,8 +1,10 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import { JSONContext } from "./JSONContext";
+import './TextView.scss';
 
-function TextComponent({ handleChange }) {
+import { JSONContext } from '../../context/JSONContext';
+
+function TextView({ handleChange }) {
     const context = useContext(JSONContext);
     return (
         <section>
@@ -12,4 +14,4 @@ function TextComponent({ handleChange }) {
     );
 }
 
-export default TextComponent;
+export default TextView;

@@ -1,0 +1,17 @@
+@use "../../assets/styles/color" as *;
+
+main {
+    position: absolute;
+    top: 159px;
+    left: 40px;
+    right: 40px;
+    bottom: 12px;
+    display: flex;
+    background-color: $white;
+    border: 1px solid $nepal;
+    border-top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    font-size: 12px;
+}

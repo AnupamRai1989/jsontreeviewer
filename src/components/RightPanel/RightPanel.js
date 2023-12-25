@@ -1,4 +1,6 @@
-function RightPanelComponent({ object, getObjectContent }) {
+import './RightPanel.scss';
+
+function RightPanel({ object, getObjectContent }) {
     const tableBodyRows = getObjectContent(object, true);
 
     return (
@@ -18,4 +20,4 @@ function RightPanelComponent({ object, getObjectContent }) {
     );
 }
 
-export default RightPanelComponent;
+export default RightPanel;

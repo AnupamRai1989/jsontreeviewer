@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import Header from './Header';
-import JSONBodyComponent from './JSONBodyComponent';
-import NavBar from './NavBar';
-import { JSONContext } from './JSONContext';
-import AlertBox from './AlertBox';
+import MainView from './components/MainView/MainView';
+import { JSONContext } from './context/JSONContext';
+import Alert from './components/Alert/Alert';
+import Header from './components/Header/Header';
+import NavBar from './components/NavBar/NavBar';
 
 import { JSONViewMode } from './models/JSONViewMode';
 import { DEFAULT_JSON } from './models/Constants';
@@ -100,9 +100,9 @@ function App() {
         navActionsByViewMode={navActionsByViewMode}
       />
       <JSONContext.Provider value={{ json: jsonTxt, expandAll: expandAll }}>
-        <JSONBodyComponent viewMode={viewMode} handleChange={handleTextChange} />
+        <MainView viewMode={viewMode} handleChange={handleTextChange} />
       </JSONContext.Provider>
-      <AlertBox show={alert.show} message={alert.message} type="error" closeBtnHandler={closeAlert} />
+      <Alert show={alert.show} message={alert.message} type="error" closeBtnHandler={closeAlert} />
     </>
   );
 }

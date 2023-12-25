@@ -1,4 +1,6 @@
-function AlertBox({show, message, type, closeBtnHandler}) {
+import './Alert.scss';
+
+function Alert({show, message, type, closeBtnHandler}) {
     const className = show ? `alert-wrapper alert-visible alert-${type}` : 'alert-wrapper';
     return (
         <div className={className}>
@@ -9,4 +11,4 @@ function AlertBox({show, message, type, closeBtnHandler}) {
     )
 }
 
-export default AlertBox;
+export default Alert;

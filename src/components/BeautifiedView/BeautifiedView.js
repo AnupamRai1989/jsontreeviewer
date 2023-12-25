@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
-import { JSONContext } from "./JSONContext";
-import NodeComponent from "./NodeComponent";
-import RightPanelComponent from "./RightPanelComponent";
 
-function BeautifiedComponent() {
+import { JSONContext } from "../../context/JSONContext";
+
+import TreeNode from "../TreeNode/TreeNode";
+import RightPanel from "../RightPanel/RightPanel";
+
+function BeautifiedView() {
     const context = useContext(JSONContext);
     const json = JSON.parse(context.json);
 
@@ -46,7 +48,7 @@ function BeautifiedComponent() {
                         isObject = true;
                         displayValue = isPanel
                             ? (Array.isArray(value) ? 'Array': 'Object')
-                            : <NodeComponent name={key} object={value} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />;
+                            : <TreeNode name={key} object={value} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />;
                     }
                     break;
                 default:
@@ -71,11 +73,11 @@ function BeautifiedComponent() {
     return (
         <>
             <div className="beautified-wrapper">
-                <NodeComponent name={ null } object={json} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />
+                <TreeNode name={ null } object={json} getObjectContent={getObjectContent} handleActiveObj={handleActiveObj} />
             </div>
-            <RightPanelComponent object={activeObj} getObjectContent={getObjectContent} />
+            <RightPanel object={activeObj} getObjectContent={getObjectContent} />
         </>
     );
 }
 
-export default BeautifiedComponent;
+export default BeautifiedView;
