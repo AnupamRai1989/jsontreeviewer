@@ -1,4 +1,4 @@
-@use "../../assets/styles/color" as *;
+@use "../../assets/styles/color"as *;
 
 nav {
     position: fixed;
@@ -46,4 +46,23 @@ nav ul li button.active {
     nav ul {
         justify-content: flex-start;
     }
+}
+
+.secondary-nav {
+    position: fixed;
+    top: 107px;
+    left: 40px;
+    right: 40px;
+    background-color: $white;
+    border: 1px dashed $bismark;
+    border-top: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.secondary-nav button {
+    border: 1px solid $deep-cerulean;
+    border-radius: 5px;
+    padding: 5px;
 }

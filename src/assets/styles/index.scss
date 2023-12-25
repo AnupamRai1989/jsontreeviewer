@@ -29,7 +29,7 @@ body {
 
 .prop-name {
   font-size: 13px;
-  color: #92A8D1;
+  color: $steel-blue;
   border: 0;
   padding: 0;
   background-color: unset;
@@ -37,15 +37,15 @@ body {
 
 .prop-value-boolean,
 .prop-value-object {
-  color: #0072B5;
+  color: $orient;
 }
 
 .prop-value-number {
-  color: #009B77;
+  color: $deep-sea;
 }
 
 .prop-value-string {
-  color: #FF6F61;
+  color: $bittersweet;
 }
 
 span[class^="prop-value"] {
@@ -79,10 +79,6 @@ span[class^="prop-value"] {
   width: 15px;
 }
 
-.beautified-wrapper ul .prop-name-obj:before {
-  top: 9px;
-}
-
 .show {
   display: block;
 }
@@ -90,25 +86,6 @@ span[class^="prop-value"] {
 .hide {
   display: none;
   transition: opacity 0.5s linear;
-}
-
-.secondary-nav {
-  position: fixed;
-  top: 107px;
-  left: 40px;
-  right: 40px;
-  background-color: $white;
-  border: 1px dashed #466c83;
-  border-top: 0;
-  padding: 10px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.secondary-nav button {
-  border: 1px solid $deep-cerulean;
-  border-radius: 5px;
-  padding: 5px;
 }
 
 .btn-primary {
@@ -120,10 +97,6 @@ span[class^="prop-value"] {
 .btn-secondary {
   background-color: $white;
   color: $deep-cerulean;
-}
-
-.prop-name-wrapper {
-  display: flex;
 }
 
 .close-btn {

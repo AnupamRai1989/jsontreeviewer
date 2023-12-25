@@ -1,3 +1,5 @@
+@use "../../assets/styles/color"as *;
+
 .right-panel {
     display: none;
     min-width: 425px;
@@ -5,15 +7,15 @@
 }
 
 .right-panel thead th {
-    border-bottom: 2px solid #466c83;
+    border-bottom: 2px solid $bismark;
 }
 
 .right-panel tbody tr:nth-child(odd) {
-    background-color: #EDF3FC;
+    background-color: $selago;
 }
 
 .right-panel tbody tr:nth-child(even) {
-    background-color: #FBFBFB;
+    background-color: $alabaster;
 }
 
 .right-panel table th,
