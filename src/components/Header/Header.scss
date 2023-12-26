@@ -1,18 +1,44 @@
 header {
     position: fixed;
-    left: 40px;
-    right: 40px;
+    left: 20px;
+    right: 20px;
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header h1 {
     font-weight: 200;
     margin: 10.5px 0;
-    text-align: center;
 }
 
-@media screen and (min-width: 450px) {
-    header h1 {
-        text-align: left;
+.logo {
+    color: blue;
+    font-size: 30px;
+    margin-right: 3px;
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+.tree::before {
+    content: '{';
+    position: relative;
+    left: -12px;
+    bottom: 8px;
+}
+
+.tree::after {
+    content: '}';
+    position: relative;
+    right: -12px;
+    bottom: 8px;
+}
+
+@media screen and (min-width: 420px) {
+    header {
+        left: 40px;
+        right: 40px;
+        justify-content: flex-start;
     }
 }

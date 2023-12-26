@@ -2,8 +2,8 @@
 
 nav {
     position: fixed;
-    left: 40px;
-    right: 40px;
+    left: 20px;
+    right: 20px;
     top: 60px;
     height: 45px;
     background-color: $jungle-mist;
@@ -51,8 +51,8 @@ nav ul li button.active {
 .secondary-nav {
     position: fixed;
     top: 107px;
-    left: 40px;
-    right: 40px;
+    left: 20px;
+    right: 20px;
     background-color: $white;
     border: 1px dashed $bismark;
     border-top: 0;
@@ -66,4 +66,12 @@ nav ul li button.active {
     border: 1px solid $deep-cerulean;
     border-radius: 5px;
     padding: 5px;
+}
+
+
+@media screen and (min-width: 420px) {
+    nav, .secondary-nav {
+        left: 40px;
+        right: 40px;
+    }
 }

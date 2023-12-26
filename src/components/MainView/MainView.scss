@@ -3,8 +3,8 @@
 main {
     position: absolute;
     top: 152px;
-    left: 40px;
-    right: 40px;
+    left: 20px;
+    right: 20px;
     bottom: 15px;
     display: flex;
     background-color: $white;
@@ -14,4 +14,11 @@ main {
     border-bottom-right-radius: 5px;
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
     font-size: 12px;
+}
+
+@media screen and (min-width: 420px) {
+    main {
+        left: 40px;
+        right: 40px;
+    }
 }
