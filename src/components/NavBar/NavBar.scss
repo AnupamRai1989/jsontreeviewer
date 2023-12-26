@@ -59,6 +59,7 @@ nav ul li button.active {
     padding: 10px;
     display: flex;
     justify-content: flex-end;
+    z-index: 1;
 }
 
 .secondary-nav button {

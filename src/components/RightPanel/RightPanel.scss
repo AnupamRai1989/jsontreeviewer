@@ -6,10 +6,6 @@
     overflow: auto;
 }
 
-.right-panel thead th {
-    border-bottom: 2px solid $bismark;
-}
-
 .right-panel tbody tr:nth-child(odd) {
     background-color: $selago;
 }
@@ -28,6 +24,11 @@ td {
     text-overflow: ellipsis;
     width: 200px;
     word-break: break-word;
+}
+
+.right-panel table thead th {
+    border-bottom: 2px solid $bismark;
+    padding-top: 8px;
 }
 
 @media screen and (min-width: 768px) {

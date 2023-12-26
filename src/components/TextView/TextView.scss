@@ -1,12 +1,12 @@
 textarea {
     position: absolute;
-    left: 0;
-    right: 1px;
-    border: 0;
     top: 0;
+    right: 1px;
     bottom: 1px;
+    left: 0;
+    border: 0;
+    padding-top: 4px;
     outline: none;
     resize: none;
     font-size: 12px;
 }
-
