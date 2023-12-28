@@ -3,18 +3,21 @@ import { useEffect, useState } from 'react';
 import MainView from './components/MainView/MainView';
 import { JSONContext } from './context/JSONContext';
 import Alert from './components/Alert/Alert';
-import Header from './components/Header/Header';
-import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Modal from './components/Modal/Modal';
+import NavBar from './components/NavBar/NavBar';
 
 import { JSONViewMode } from './models/JSONViewMode';
 import { DEFAULT_JSON } from './models/Constants';
+import FooterAction from "./models/FooterAction";
 
 function App() {
   const [viewMode, setViewMode] = useState(JSONViewMode.Text);
   const [jsonTxt, setJsonTxt] = useState(JSON.stringify(DEFAULT_JSON, null, 2));
   const [expandAll, setExpandAll] = useState(null);
   const [alert, setAlert] = useState({ show: false, message: '', type: 'error' });
+  const [modalState, setModalState] = useState({ show: false, type: '' });
 
   useEffect(() => {
     expandAllHandler(null);
@@ -93,6 +96,33 @@ function App() {
     setJsonTxt('');
   }
 
+  function closeModal() {
+    setModalState({
+      ...modalState,
+      show: false,
+      type: ''
+    });
+  }
+
+  function footerActionHandler(action) {
+    let type;
+    switch (action) {
+      case FooterAction.About:
+        type = FooterAction.About;
+        break;
+      case FooterAction.PrivacyPolicy:
+        type = FooterAction.PrivacyPolicy;
+        break;
+        default:
+          break;
+    }
+    setModalState({
+      ...modalState,
+      show: true,
+      type
+    })
+  }
+
   return (
     <>
       <Header title={title} />
@@ -104,8 +134,9 @@ function App() {
       <JSONContext.Provider value={{ json: jsonTxt, expandAll: expandAll }}>
         <MainView viewMode={viewMode} handleChange={handleTextChange} />
       </JSONContext.Provider>
-      <Footer />
+      <Footer footerActionHandler={footerActionHandler} />
       <Alert show={alert.show} message={alert.message} type="error" closeBtnHandler={closeAlert} />
+      <Modal show={modalState.show} type={modalState.type} closeBtnHandler={closeModal} />
     </>
   );
 }

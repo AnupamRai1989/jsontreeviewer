@@ -6,20 +6,31 @@ footer {
     left: 20px;
     right: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 13px;
+    color: $pickled-bluewood;
+}
+
+footer button {
+    background-color: unset;
+    border: 0;
+    color: $pickled-bluewood;
+    padding: 0;
+    padding-left: 12px;
+    text-decoration: underline;
+}
+
+footer button::before {
+    content: '|';
+    pointer-events: none;
+    position: relative;
+    left: -6px;
 }
 
 @media screen and (min-width: 420px) {
     footer {
         left: 40px;
         right: 40px;
-        justify-content: flex-start;
     }
-}
-
-.copyright {
-    color: $pickled-bluewood;
 }

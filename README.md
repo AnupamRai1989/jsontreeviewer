@@ -5,13 +5,13 @@ Quick and easy tool to view your JSON text in a DOM tree.
 ## Features
 
 - Validate your JSON by entering or pasting JSON text. 
-- Prettify you JSON.
+- Prettify your JSON.
 - Transform/Preview your JSON text into collapsible/expandable DOM tree.
 - Right panel to list selected/clicked object's property and values.
 
 ## Live Website
 
-See the hosted website in action [here](https://anupamrai1989.github.io/).
+See the hosted website in action [here](https://jsontreeview.org).
 
 ## Build Steps
 

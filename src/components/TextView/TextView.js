@@ -8,7 +8,7 @@ function TextView({ handleChange }) {
   const context = useContext(JSONContext);
   return (
     <section>
-      <label for="jsonTextInput" className="sr-only">
+      <label htmlFor="jsonTextInput" className="sr-only">
         Type or Paste JSON Text
       </label>
       <textarea
