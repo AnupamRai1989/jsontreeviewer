@@ -5,6 +5,7 @@ import { JSONContext } from './context/JSONContext';
 import Alert from './components/Alert/Alert';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 
 import { JSONViewMode } from './models/JSONViewMode';
 import { DEFAULT_JSON } from './models/Constants';
@@ -14,6 +15,7 @@ function App() {
   const [jsonTxt, setJsonTxt] = useState(JSON.stringify(DEFAULT_JSON, null, 2));
   const [expandAll, setExpandAll] = useState(null);
   const [alert, setAlert] = useState({ show: false, message: '', type: 'error' });
+
   useEffect(() => {
     expandAllHandler(null);
   }, [expandAll]);
@@ -102,6 +104,7 @@ function App() {
       <JSONContext.Provider value={{ json: jsonTxt, expandAll: expandAll }}>
         <MainView viewMode={viewMode} handleChange={handleTextChange} />
       </JSONContext.Provider>
+      <Footer />
       <Alert show={alert.show} message={alert.message} type="error" closeBtnHandler={closeAlert} />
     </>
   );

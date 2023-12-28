@@ -1,0 +1,25 @@
+@use "../../assets/styles/color" as *;
+
+footer {
+    position: fixed;
+    bottom: 3px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+@media screen and (min-width: 420px) {
+    footer {
+        left: 40px;
+        right: 40px;
+        justify-content: flex-start;
+    }
+}
+
+.copyright {
+    color: $pickled-bluewood;
+}

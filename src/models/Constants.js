@@ -1,14 +1,15 @@
 export const DEFAULT_JSON = {
-    name: "Godfather",
-    year: 1972,
-    drama: true,
-    sequels: [
-        "Godfather II",
-        "Godfather III"
-    ],
-    cast: [
-        { name: 'Marlon Brando', characterName: "Vito Corleone" },
-        { name: 'Al Pacino', characterName: "Michael Corleone" }
-    ],
-    upcomingSequel: null
+  name: "John Doe",
+  age: 35,
+  graduated: true,
+  occupation: "Software Engineer",
+  skills: [
+    { language: "JavaScript", yoe: 8 },
+    { language: "Java", yoe: 5 }
+  ],
+  certifications: [
+    "Certificate A",
+    "Certificate B"
+  ],
+  patents: null
 };
