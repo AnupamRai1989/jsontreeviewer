@@ -5,7 +5,7 @@ import { JSONViewMode } from "../../models/JSONViewMode";
 function NavBar({ viewMode, handleMenuClick, navActionsByViewMode }) {
   const menus = [
     { id: 0, text: JSONViewMode.Text },
-    { id: 1, text: JSONViewMode.Beautified },
+    { id: 1, text: JSONViewMode.Tree },
   ];
   const menuItems = menus.map((menu) => {
     return (

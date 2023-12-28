@@ -28,7 +28,7 @@ function App() {
       { name: 'Prettier', handler: prettierClickHandler, className: 'btn-primary' },
       { name: 'Clear', handler: clearClickHandler, className: 'btn-secondary' }
     ],
-    [JSONViewMode.Beautified]: [
+    [JSONViewMode.Tree]: [
       { name: 'Expand All', handler: expandAllHandler.bind(null, true), className: 'btn-primary' },
       { name: 'Collapse All', handler: expandAllHandler.bind(null, false), className: 'btn-secondary' }
     ]
