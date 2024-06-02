@@ -51,7 +51,7 @@ function TreeNode({ name, object, getObjectContent, handleActiveObj }) {
         {objPropsContent}
       </ul>
       <button type="button" className="bracket bracket-close">
-        {Array.isArray(list) ? "]" : "}"}
+        { list ? "]" : "}" }
       </button>
     </>
   );
