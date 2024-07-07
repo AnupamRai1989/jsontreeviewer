@@ -21,7 +21,7 @@ function Modal({ show, type, closeBtnHandler }) {
   return (
     <>
       <section className={modalClassName}>
-        <div className="backdrop"></div>
+        <div className="backdrop" onClick={closeBtnHandler}></div>
         <aside className="modal">
           <div className="modal-header">
             <span>{type}</span>

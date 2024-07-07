@@ -2,8 +2,12 @@
 
 .right-panel {
     display: none;
-    min-width: 425px;
     overflow: auto;
+}
+
+table {
+    align-self: flex-start;
+    width: 100%;
 }
 
 .right-panel tbody tr:nth-child(odd) {
@@ -27,12 +31,30 @@ td {
 }
 
 .right-panel table thead th {
-    border-bottom: 2px solid $bismark;
+    border-bottom: 2px solid $ming;
     padding-top: 8px;
+}
+
+.draggable {
+    background-color: $ming;
+    min-width: 3px;
+}
+
+.drag-preview {
+    background-color: $fiord;
+    min-width: 4px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: none;
+}
+
+.draggable:hover {
+    cursor: col-resize;
 }
 
 @media screen and (min-width: 768px) {
   .right-panel {
-    display: block;
+    display: flex;
   }
 }
